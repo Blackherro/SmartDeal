@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkcolor"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomnavi">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bkimg"
+                android:layout_width="316dp"
+                android:layout_height="107dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/logo"
+                />
+
+
+            <EditText
+                android:id="@+id/edtinfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bksearch"
+                android:drawableRight="@drawable/searchicon"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="45dp"
+                android:paddingLeft="10sp"
+                android:paddingRight="15dp"
+                android:textColor="#0C0C0C"
+                android:textColorHint="#1B1818"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="DEALS"
+                    android:textColor="#039EFA"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/black"
+                    android:backgroundTint="#039EFA"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/cu"
+                    android:drawableTop="@drawable/food"
+                    android:gravity="center"
+                    android:text="Ẩm thực"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/cu"
+                    android:drawableTop="@drawable/travel"
+                    android:gravity="center"
+                    android:text="Du lịch"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/cu"
+                    android:drawableTop="@drawable/spa"
+                    android:gravity="center"
+                    android:text="Spa"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="290dp"
+                android:layout_height="121dp"
+                android:src="@drawable/test1"/>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="6dp"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingClass">
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Ẩm thực"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:background="@color/black"
+                    android:backgroundTint="@color/black"></LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVoucherMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/selectbtn"
+        app:itemTextColor="@drawable/selectbtn"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navi" />
+
+</RelativeLayout>
